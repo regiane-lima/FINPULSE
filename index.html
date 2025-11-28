@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FINPULSE Ultra Deluxe</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="dashboard">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>FINPULSE</h2>
+    <nav>
+      <ul>
+        <li><a href="#" id="nav-dashboard"><i class="fas fa-home"></i> Dashboard</a></li>
+        <li><a href="#" id="nav-pix"><i class="fas fa-paper-plane"></i> PIX</a></li>
+        <li><a href="#" id="nav-recharge"><i class="fas fa-bolt"></i> Recarga</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Dashboard -->
+    <section id="section-dashboard">
+      <header>
+        <h1>Bem-vindo ao FINPULSE</h1>
+      </header>
+      <div class="cards">
+        <div class="card balance-card">
+          <i class="fas fa-wallet"></i>
+          <h3>Saldo</h3>
+          <p id="balance">R$ 1.500</p>
+          <canvas id="balance-chart" width="100" height="40"></canvas>
+        </div>
+        <div class="card pix-card">
+          <i class="fas fa-paper-plane"></i>
+          <h3>Últimos PIX</h3>
+          <ul id="last-pix"><li>—</li></ul>
+        </div>
+        <div class="card alerts-card">
+          <i class="fas fa-bell"></i>
+          <h3>Alertas Visuais</h3>
+          <p>Todos os eventos importantes com cores, vibração e animação</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PIX -->
+    <section id="section-pix" class="hidden">
+      <h2>Enviar PIX</h2>
+      <div class="form-card">
+        <label>Valor do PIX:</label>
+        <input type="number" id="pix-amount" placeholder="Ex: 50" />
+        <button id="send-pix">💸 Enviar PIX</button>
+      </div>
+      <div id="pix-feedback" class="feedback-card"></div>
+    </section>
+
+    <!-- Recarga -->
+    <section id="section-recharge" class="hidden">
+      <h2>Recarga</h2>
+      <div class="form-card">
+        <label>Valor da Recarga:</label>
+        <input type="number" id="recharge-amount" placeholder="Ex: 100" />
+        <button id="do-recharge">⚡ Recargar</button>
+      </div>
+      <div id="recharge-feedback" class="feedback-card"></div>
+    </section>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
